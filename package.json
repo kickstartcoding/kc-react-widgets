@@ -1,7 +1,7 @@
 {
   "name": "kc-react-widgets",
   "version": "1.0.0",
-  "description": "kc-react-widgets React component",
+  "description": "Suite of pre-styled React components",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -27,11 +27,14 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   },
-  "author": "",
+  "author": "michaelb",
   "homepage": "./",
   "license": "LGPL 3.0",
-  "repository": "",
+  "repository": "http://github.com/michaelpb/kc-react-widgets/",
   "keywords": [
-    "react-component"
+    "react-component",
+    "button",
+    "widgets",
+    "toggle"
   ]
 }
