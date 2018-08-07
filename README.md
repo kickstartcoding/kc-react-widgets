@@ -1,6 +1,6 @@
 # kc-react-widgets
 
-[![npm package][npm-badge]][npm]
+[![kc-react-widget][npm-badge]][npm]
 
 <!--
 [![Travis][build-badge]][build]
@@ -54,8 +54,8 @@ class App extends Component {
   * Can be customized based on shape, color, 3D perspective depth
   * Can be used as a toggle (checkbox)
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+[npm-badge]: https://img.shields.io/npm/v/kc-react-widgets.png?style=flat-square
+[npm]: https://www.npmjs.org/package/kc-react-widgets
 
 
 <!--
