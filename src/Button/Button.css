@@ -1,0 +1,218 @@
+/* 
+  Base Styles
+*/
+.Button {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  border: 1px solid gray;
+  transition: 0.1s;
+  box-shadow:
+    inset
+    calc(0px - var(--pressdepth)) calc(0px - var(--pressdepth))
+    1px 1px
+    rgba(100, 100, 100, 0.3);
+  cursor: default;
+  text-align: center;
+  user-select: none;
+
+  padding: var(--padding);
+  margin-left: var(--marginleft);
+  margin-bottom: var(--margintop);
+  margin-top: var(--margintop);
+  min-width: var(--width);
+  height: var(--height);
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.Button:active,
+.Button--depressed {
+  box-shadow:
+    inset
+    var(--pressdepth) var(--pressdepth)
+    1px 1px
+    rgba(100, 100, 100, 0.3);
+  border-radius: 1px 1px 1px 1px;
+  top: var(--pressdepth);
+  left: var(--pressdepth);
+
+  margin-left: calc(var(--marginleft) + var(--pressdepth));
+  margin-top: calc(var(--margintop) + var(--pressdepth));
+  /*
+    margin-left: calc(var(--marginleft) + var(--pressdepth));
+    margin-top: calc(var(--margintop) + var(--pressdepth));
+  */
+  padding-right: calc(var(--padding) - var(--pressdepth));
+  padding-bottom: calc(var(--padding) - var(--pressdepth));
+  min-width: calc(var(--width) - var(--pressdepth));
+  height:  calc(var(--height) - var(--pressdepth));
+  /*margin-bottom: calc(var(--margintop) - var(--pressdepth));*/
+}
+
+/* 
+  Coloring
+*/
+.Button--default {
+  background: var(--kcw-default, white);
+  color: var(--kcw-default-fg, black);
+}
+
+.Button--primary {
+  background: var(--kcw-primary, #2F20DA);
+  color: var(--kcw-primary-fg, white);
+}
+
+.Button--danger {
+  background: var(--kcw-danger, tomato);
+  color: var(--kcw-danger-fg, white);
+}
+
+.Button--success {
+  background: var(--kcw-success, #20DA33);
+  color: var(--kcw-success-fg, white);
+}
+
+.Button--warning {
+  background: var(--kcw-warning, goldenrod);
+  color: var(--kcw-warning-fg, white);
+}
+
+.Button--round {
+  border-radius: 20px;
+}
+
+.Button--small {
+  --padding: 8px;
+  --marginleft: 5px;
+  --margintop: 2px;
+  --width: 50px;
+  --height: 35px;
+  font-size: 11pt;
+}
+
+.Button--medium {
+  --padding: 12px;
+  --marginleft: 5px;
+  --margintop: 2px;
+  --width: 50px;
+  --height: 50px;
+  font-size: 14pt;
+}
+
+.Button--large {
+  --padding: 20px;
+  --marginleft: 5px;
+  --margintop: 2px;
+  --width: 50px;
+  --height: 75px;
+  font-size: 20pt;
+}
+
+
+.Button--gigantic {
+  --padding: 25px;
+  --marginleft: 5px;
+  --margintop: 2px;
+  --width: 50px;
+  --height: 100px;
+  font-size: 28pt;
+}
+
+.Button--toweringDepth {
+  border-radius: 1px 10px 1px 10px;
+  --pressdepth: 5px;
+}
+
+.Button--tallDepth {
+  border-radius: 1px 8px 1px 8px;
+  --pressdepth: 3px;
+}
+
+
+.Button--mediumDepth {
+  border-radius: 1px 6px 1px 6px;
+  --pressdepth: 2px;
+}
+
+.Button--shallowDepth {
+  border-radius: 1px 4px 1px 4px;
+  --pressdepth: 1px;
+}
+
+.Button--flatDepth {
+  transition: 0.05s;
+  border-radius: 1px 1px 1px 1px;
+  --pressdepth: 0px;
+}
+
+.Button--flatDepth:active,
+.Button--flatDepth.Button--depressed {
+  box-shadow:
+    inset
+    0 0
+    4px 4px
+    rgba(100, 100, 100, 0.3);
+}
+
+.Button--depressed {
+  border-radius: 1px 1px 1px 1px;
+}
+
+.Button--rounded {
+  border-radius: 20px;
+}
+
+.Button--rounded:active,
+.Button--rounded.Button--depressed {
+  border-radius: 20px;
+}
+
+.Button--round {
+  border-radius: 150px;
+}
+
+.Button--round:active,
+.Button--round.Button--depressed {
+  border-radius: 150px;
+}
+
+/*
+  Button
+*/
+.Button-icon {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.Button-contentsWrapper {
+  display: flex;
+
+}
+
+.Button-icon {
+  margin-right: 10px;
+}
+
+.Button-icon--right {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.Button--small .Button-icon {
+  height: 11pt;
+}
+
+.Button--medium .Button-icon {
+  height: 14pt;
+}
+
+.Button--large .Button-icon {
+  height: 20pt;
+}
+
+.Button--gigantic .Button-icon {
+  height: 28pt;
+}
+

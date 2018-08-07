@@ -1,11 +1,54 @@
 # kc-react-widgets
 
-[![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
+
+<!--
+[![Travis][build-badge]][build]
 [![Coveralls][coveralls-badge]][coveralls]
+-->
 
-Describe kc-react-widgets here.
+KC React Widgets is a suite of pre-styled react widgets.
 
+The widgets have a noticeable "3D", skeumorphic appearance, and are good for bold
+call-to-action widgets, such as "launch buttons".
+
+## Installation
+
+
+```bash
+npm install --save kc-react-widgets   # using NPM
+yarn add kc-react-widgets             # using yarn
+```
+
+
+## Example use
+
+```javascript
+import React, {Component} from 'react';
+import {Button} from '../../src';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Button onClick={() => console.log('Hello world!')}>
+          Click me!
+        </Button>
+      </div>
+    );
+  }
+}
+```
+
+
+## Widgets available
+
+* Button
+  * Can be customized based on shape, color, 3D perspective depth
+  * Can be used as a toggle (checkbox)
+
+
+<!--
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
 
@@ -14,3 +57,4 @@ Describe kc-react-widgets here.
 
 [coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/user/repo
+-->
