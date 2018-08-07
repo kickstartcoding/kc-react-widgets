@@ -12,6 +12,13 @@ KC React Widgets is a suite of pre-styled react widgets.
 The widgets have a noticeable "3D", skeumorphic appearance, and are good for bold
 call-to-action widgets, such as "launch buttons".
 
+## Demo
+
+![GIF]()
+
+[View Demo](https://michaelpb.github.io/kc-react-widgets/index.html)
+
+
 ## Installation
 
 
@@ -47,13 +54,13 @@ class App extends Component {
   * Can be customized based on shape, color, 3D perspective depth
   * Can be used as a toggle (checkbox)
 
+[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
+[npm]: https://www.npmjs.org/package/npm-package
+
 
 <!--
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
-
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
 
 [coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/user/repo

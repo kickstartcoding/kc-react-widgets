@@ -147,7 +147,7 @@ class App extends Component {
               <Button
                 value={this.state.button1}
                 type="danger"
-                height="towering"
+                depth="towering"
                 size="large"
                 onChange={ev => this.setState({button1: ev.target.value})}
                 >Toggle me</Button>
@@ -156,7 +156,7 @@ class App extends Component {
               <Button
                 value={this.state.button1}
                 type="danger"
-                height="towering"
+                depth="towering"
                 size="large"
                 onChange={ev => this.setState({toggle: ev.target.value})}
                 >Toggle me</Button>
