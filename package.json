@@ -24,12 +24,12 @@
   },
   "devDependencies": {
     "nwb": "0.19.x",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react": "16.4.2",
+    "react-dom": "16.4.2"
   },
   "author": "michaelb",
   "homepage": "./",
-  "license": "LGPL 3.0",
+  "license": "MIT",
   "repository": "http://github.com/michaelpb/kc-react-widgets/",
   "keywords": [
     "react-component",

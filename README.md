@@ -54,6 +54,15 @@ class App extends Component {
   * Can be customized based on shape, color, 3D perspective depth
   * Can be used as a toggle (checkbox)
 
+## License
+
+`kc-react-widget` is licensed under the MIT license.
+
+## Contributions
+
+Pull requests are welcome!
+
+
 [npm-badge]: https://img.shields.io/npm/v/kc-react-widgets.png?style=flat-square
 [npm]: https://www.npmjs.org/package/kc-react-widgets
 
