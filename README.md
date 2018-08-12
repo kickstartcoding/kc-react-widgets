@@ -32,7 +32,7 @@ yarn add kc-react-widgets             # using yarn
 
 ```javascript
 import React, {Component} from 'react';
-import {Button} from '../../src';
+import {Button} from 'kc-react-widgets';
 
 class App extends Component {
   render() {
