@@ -104,10 +104,11 @@ class App extends Component {
               <Button depth="towering">Towering</Button>
             </div>
             <Code>{`
-              <Button size="small">Small</Button>
-              <Button size="medium">Medium</Button>
-              <Button size="large">Large</Button>
-              <Button size="gigantic">Gigantic</Button>
+              <Button depth="flat">Flat</Button>
+              <Button depth="shallow">Shallow</Button>
+              <Button depth="medium">Medium</Button>
+              <Button depth="tall">Tall</Button>
+              <Button depth="towering">Towering</Button>
             `}</Code>
           </div>
 
@@ -187,6 +188,5 @@ class App extends Component {
     );
   }
 }
-
 
 render(<App/>, document.querySelector('#demo'))

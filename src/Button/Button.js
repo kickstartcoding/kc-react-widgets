@@ -73,6 +73,7 @@ class Button extends Component {
   }
 
   render() {
+    // Build button classes based on props
     const {style, type, shape, size, depth, value} = this.props;
     let classNames = ['Button'];
 

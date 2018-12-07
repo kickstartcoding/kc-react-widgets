@@ -188,7 +188,6 @@
 
 .Button-contentsWrapper {
   display: flex;
-
 }
 
 .Button-icon {
@@ -215,4 +214,3 @@
 .Button--gigantic .Button-icon {
   height: 28pt;
 }
-
