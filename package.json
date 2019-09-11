@@ -20,7 +20,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "15.x"
+    "react": "16.x"
   },
   "devDependencies": {
     "nwb": "0.19.x",
@@ -30,7 +30,7 @@
   "author": "michaelb",
   "homepage": "./",
   "license": "MIT",
-  "repository": "http://github.com/michaelpb/kc-react-widgets/",
+  "repository": "http://github.com/kickstartcoding/kc-react-widgets/",
   "keywords": [
     "react-component",
     "button",

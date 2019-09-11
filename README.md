@@ -14,9 +14,9 @@ call-to-action widgets, such as "launch buttons".
 
 ## Demo
 
-![GIF](https://github.com/michaelpb/kc-react-widgets/raw/master/demo/togglingsample.gif)
+![GIF](https://github.com/kickstartcoding/kc-react-widgets/raw/master/demo/togglingsample.gif)
 
-[View Demo](https://michaelpb.github.io/kc-react-widgets/index.html)
+[View Demo](https://kickstartcoding.github.io/kc-react-widgets/index.html)
 
 
 ## Installation
