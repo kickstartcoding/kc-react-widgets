@@ -7,7 +7,7 @@ body {
 .App {
     background: url('./congruent_pentagon/congruent_pentagon.png');
     display: grid;
-    grid-template-columns: 1fr 200px minmax(auto, 1200px) 1fr;
+    grid-template-columns: 1fr 200px minmax(0, 1200px) 1fr;
     grid-template-rows: 100px auto;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
@@ -112,6 +112,13 @@ body {
   font-size: 32pt;
   color: tomato;
   margin-bottom: 20px;
+  border-top: 2px dashed tomato;
+  padding-top: 20px;
+}
+
+.App-mainContent h1:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
 

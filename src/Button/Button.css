@@ -89,7 +89,7 @@
   --margintop: 2px;
   --width: 50px;
   --height: 35px;
-  font-size: 11pt;
+  font-size: 14px;
 }
 
 .kc-Button--medium {
@@ -98,7 +98,7 @@
   --margintop: 2px;
   --width: 50px;
   --height: 50px;
-  font-size: 14pt;
+  font-size: 20px;
 }
 
 .kc-Button--large {
@@ -107,7 +107,7 @@
   --margintop: 2px;
   --width: 50px;
   --height: 75px;
-  font-size: 20pt;
+  font-size: 28px;
 }
 
 
@@ -117,7 +117,7 @@
   --margintop: 2px;
   --width: 50px;
   --height: 100px;
-  font-size: 28pt;
+  font-size: 34px;
 }
 
 .kc-Button--toweringDepth {
@@ -200,17 +200,17 @@
 }
 
 .kc-Button--small .kc-Button-icon {
-  height: 11pt;
+  height: 14px;
 }
 
 .kc-Button--medium .kc-Button-icon {
-  height: 14pt;
+  height: 20px;
 }
 
 .kc-Button--large .kc-Button-icon {
-  height: 20pt;
+  height: 24px;
 }
 
 .kc-Button--gigantic .kc-Button-icon {
-  height: 28pt;
+  height: 32px;
 }

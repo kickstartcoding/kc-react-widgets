@@ -7,6 +7,9 @@ import './index.css';
 import {
   Button,
   Dropdown,
+  Card,
+  Modal,
+  Input,
 } from '../../src';
 
 function Code({children}) {
@@ -21,14 +24,21 @@ function Code({children}) {
 
 const NAV_ARRAY = [
   'Introduction',
+  'Common',
   'Button',
   'Dropdown',
+  'Card',
+  'Modal',
+  'Input',
 ];
 
 function App() {
   const [button1, setButton1] = useState(false);
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
+  const [modal1, setModal1] = useState(false);
+  const [modal2, setModal2] = useState(false);
+  const [input1, setInput1] = useState('');
   return (
     <div className="App">
 
@@ -81,7 +91,9 @@ function App() {
           `}</Code>
         </div>
 
-        <h1 id="Button">Button</h1>
+        <h1 id="Common">Common</h1>
+        <p>Thes properties can be used on all the different KC widgets. They
+        are demoed here using the Button widget.</p>
 
         <h3>Type</h3>
         <div className="App-library">
@@ -149,6 +161,37 @@ function App() {
           `}</Code>
         </div>
 
+        <h3>Customizing Colors</h3>
+        <div className="App-library">
+          <div>
+            <Button
+              type="primary"
+              style={{"--kc-primary": "rebeccapurple"}}
+            >Button</Button>
+          </div>
+          <Code>{`
+            .kc-Button {--kc-primary: rebeccapurple; }
+            OR
+            <Button
+              type="primary"
+              style={{"--kc-primary": "rebeccapurple"}}
+            >Button</Button>
+          `}</Code>
+        </div>
+
+        <h1 id="Button">Button</h1>
+        <h3>Default vs Quick Press</h3>
+        <div className="App-library">
+          <div>
+            <Button depth="towering">Default</Button>
+            <Button depth="towering" quickPress>Quick press</Button>
+          </div>
+          <Code>{`
+            <Button depth="towering">Normal press</Button>
+            <Button depth="towering" quickPress>Quick press</Button>
+          `}</Code>
+        </div>
+
         <h3>With Image</h3>
         <div className="App-library">
           <div>
@@ -186,26 +229,6 @@ function App() {
               >Toggle me</Button>
           `}</Code>
         </div>
-
-        <h3>Customizing Colors</h3>
-        <div className="App-library">
-          <div>
-            <Button
-              type="primary"
-              style={{"--kc-primary": "rebeccapurple"}}
-            >Button</Button>
-          </div>
-          <Code>{`
-            .kc-Button {--kc-primary: rebeccapurple; }
-            OR
-            <Button
-              type="primary"
-              style={{"--kc-primary": "rebeccapurple"}}
-            >Button</Button>
-          `}</Code>
-        </div>
-
-        <hr />
 
         <h1 id="Dropdown">
           Dropdown
@@ -287,6 +310,156 @@ function App() {
                   direction="right">
                 <p>Example Contents</p>
               </Dropdown>
+          `}</Code>
+        </div>
+
+        <h1 id="Card">
+          Card
+        </h1>
+
+        <div className="App-library">
+          <div>
+            <div>
+              <Card>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </Card>
+              <Card inset>
+                <p>Lorem ipsum dolor sit amet</p>
+              </Card>
+            </div>
+          </div>
+          <Code>{`
+              <Card>
+                <p>Example Contents</p>
+              </Card>
+              <Card inset>
+                <p>Example Contents</p>
+              </Card>
+          `}</Code>
+        </div>
+
+        <h1 id="Modal">
+          Modal
+        </h1>
+
+        <h3>Basic</h3>
+        <div className="App-library">
+          <div>
+            <div>
+              <Button onClick={() => setModal1(true)}>Show Modal</Button>
+              <Modal
+                  visible={modal1}
+                  onBackdropClick={() => setModal1(false)}>
+                <Card type="primary">Modal title</Card>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  in reprehenderit in voluptate velit esse cillum dolore eu
+                  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.</p>
+                <Button onClick={() => setModal1(false)}>Okay</Button>
+              </Modal>
+            </div>
+          </div>
+          <Code>{`
+              <Button onClick={() => setModal1(true)}>Show Modal</Button>
+              <Modal visible={modal1} onBackdropClick={() => setModal2(false)}>
+                <Card type="primary">Modal title</Card>
+                <p>Lorem ipsum dolor</p>
+                <Button onClick={() => setModal1(false)}>Okay</Button>
+              </Modal>
+          `}</Code>
+        </div>
+
+        <h3>Bare children</h3>
+        <div className="App-library">
+          <div>
+            <div>
+              <Button onClick={() => setModal2(true)}>Show Modal</Button>
+              <Modal
+                  visible={modal2}
+                  onBackdropClick={() => setModal2(false)}
+                  bareChildren>
+                <Card type="primary">Modal title</Card>
+                <Card>
+                  <p>Lorem ipsum dolor</p>
+                </Card>
+                <Card>
+                  <Button onClick={() => setModal2(false)}>Okay</Button>
+                </Card>
+              </Modal>
+            </div>
+          </div>
+          <Code>{`
+              <Button onClick={() => setModal2(true)}>Show Modal</Button>
+              <Modal
+                  visible={modal2}
+                  onBackdropClick={() => setModal2(false)}
+                  bareChildren>
+                <Card type="primary">Modal title</Card>
+                <Card>
+                  <p>Lorem ipsum dolor</p>
+                </Card>
+                <Card>
+                  <Button onClick={() => setModal2(false)}>Okay</Button>
+                </Card>
+              </Modal>
+          `}</Code>
+        </div>
+
+
+        <h1 id="Input">
+          Input
+        </h1>
+
+        <div className="App-library">
+          <div>
+            <Input
+              placeholder="Username"
+              value={input1}
+              onChange={ev => setInput1(ev.target.value)}
+            />
+            <Input raised
+              placeholder="Username"
+              value={input1}
+              onChange={ev => setInput1(ev.target.value)}
+            />
+            <Input
+              placeholder="Email"
+              type="email"
+              value={input1}
+              onChange={ev => setInput1(ev.target.value)}
+            />
+            <div style={{ marginTop: "20px" }}>
+              <Input flat
+                placeholder="Username"
+                value={input1}
+                onChange={ev => setInput1(ev.target.value)}
+              />
+            </div>
+          </div>
+          <Code>{`
+            <Input
+              placeholder="Username"
+              value={input1}
+              onChange={ev => setInput1(ev.target.value)}
+            />
+            <Input raised
+              placeholder="Username"
+              value={input1}
+              onChange={ev => setInput1(ev.target.value)}
+            />
+            <Input flat
+              placeholder="Username"
+              value={input1}
+              onChange={ev => setInput1(ev.target.value)}
+            />
           `}</Code>
         </div>
 

@@ -2,8 +2,24 @@ import React, { Component } from 'react';
 import './Button.css';
 
 class Button extends Component {
+  state = {
+    continuedPress: false,
+  }
+
   onClick(event) {
-    const {onChange, onClick, value} = this.props;
+    const {onChange, onClick, value, quickPress, pressSpeed} = this.props;
+
+    if (!quickPress && value === undefined) {
+      const timeMs = pressSpeed || 150;
+      this.setState({continuedPress: true});
+      clearTimeout(this._lastTimeout);
+      this._lastTimeout = setTimeout(() => {
+        this.setState({
+          continuedPress: false,
+        });
+      }, timeMs);
+    }
+
 
     if (onChange) {
       event.target.value = !value;
@@ -85,7 +101,7 @@ class Button extends Component {
     classNames.push(`kc-Button--${depth || 'medium'}Depth`);
     classNames.push(`kc-Button--${shape || 'square'}`);
 
-    if (value === true) {
+    if (value === true || this.state.continuedPress) {
       classNames.push('kc-Button--depressed');
     }
 
