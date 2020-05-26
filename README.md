@@ -16,7 +16,7 @@ call-to-action widgets, such as "launch buttons".
 
 ![GIF](https://github.com/kickstartcoding/kc-react-widgets/raw/master/demo/togglingsample.gif)
 
-[View Demo](https://kickstartcoding.github.io/kc-react-widgets/index.html)
+[View demo of all widgets](https://kickstartcoding.github.io/kc-react-widgets/index.html)
 
 
 ## Installation
@@ -50,9 +50,14 @@ class App extends Component {
 
 ## Widgets available
 
+All widgets can be customized based on shape, color, 3D perspective depth.
+
 * Button
-  * Can be customized based on shape, color, 3D perspective depth
-  * Can be used as a toggle (checkbox)
+  * Can also be used as a toggle (checkbox)
+* Input
+* Modal
+* Card
+* Dropdown
 
 ## License
 
