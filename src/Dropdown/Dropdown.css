@@ -1,0 +1,161 @@
+/* 
+  Base Styles
+*/
+.kc-Dropdown {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  border: 1px solid rgba(127, 127, 127, 0.5);
+  /*calc(0px - var(--depth)) calc(0px - var(--depth))*/
+  cursor: default;
+  user-select: none;
+  box-shadow:
+    inset
+    calc(0px - var(--carddepth)) calc(0px - var(--carddepth))
+    1px 1px
+    rgba(100, 100, 100, 0.3);
+  padding: var(--padding);
+  margin-left: var(--marginleft);
+  margin-bottom: var(--margintop);
+  margin-top: var(--margintop);
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  min-width: var(--minwidth, 200px);
+}
+
+.kc-Dropdown-placementWrapper {
+  position: relative;
+}
+
+.kc-Dropdown--rightward {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.kc-Dropdown-outerWrapper {
+  display: block;
+  position: absolute;
+  --kc-elevation: 5px;
+  --kc-shadow-color: rgba(100, 100, 100, 0.5);
+  left: calc(var(--kc-elevation) * 2);
+  box-shadow:
+    calc(var(--kc-elevation) * 1) calc(var(--kc-elevation) * 1)
+    0 2px
+    var(--kc-shadow-color);
+  background-color: transparent;
+
+  transition:
+    padding 0.2s,
+    box-shadow 0.2s,
+    opacity 0.2s;
+}
+
+
+.kc-Dropdown--hidden {
+  opacity: 0;
+  padding-top: var(--kc-elevation);
+  padding-left: var(--kc-elevation);
+  box-shadow:
+    0 0
+    1px 1px
+    rgba(100, 100, 100, 0.3);
+}
+.kc-Dropdown--visible {
+  opacity: 1.0;
+  padding-top: 0;
+  padding-left: 0;
+}
+
+/* 
+  Coloring
+*/
+.kc-Dropdown--default {
+  background-color: var(--kc-default, white);
+  color: var(--kc-default-fg, black);
+}
+
+.kc-Dropdown--primary {
+  background-color: var(--kc-primary, #2F20DA);
+  color: var(--kc-primary-fg, white);
+}
+
+.kc-Dropdown--danger {
+  background-color: var(--kc-danger, tomato);
+  color: var(--kc-danger-fg, white);
+}
+
+.kc-Dropdown--success {
+  background-color: var(--kc-success, #20DA33);
+  color: var(--kc-success-fg, white);
+}
+
+.kc-Dropdown--warning {
+  background-color: var(--kc-warning, goldenrod);
+  color: var(--kc-warning-fg, white);
+}
+
+.kc-Dropdown--round {
+  border-radius: 20px;
+}
+
+.kc-Dropdown--small {
+  --padding: 8px;
+  --marginleft: 5px;
+  --margintop: 2px;
+}
+
+.kc-Dropdown--medium {
+  --padding: 12px;
+  --marginleft: 5px;
+  --margintop: 2px;
+}
+
+.kc-Dropdown--large {
+  --padding: 20px;
+  --marginleft: 5px;
+  --margintop: 2px;
+}
+
+
+.kc-Dropdown--gigantic {
+  --padding: 25px;
+  --marginleft: 5px;
+  --margintop: 2px;
+}
+
+
+.kc-Dropdown--toweringDepth {
+  border-radius: 1px 10px 1px 10px;
+  --carddepth: 5px;
+}
+
+.kc-Dropdown--tallDepth {
+  border-radius: 1px 8px 1px 8px;
+  --carddepth: 3px;
+}
+
+.kc-Dropdown--mediumDepth {
+  border-radius: 1px 6px 1px 6px;
+  --carddepth: 2px;
+}
+
+.kc-Dropdown--shallowDepth {
+  border-radius: 1px 4px 1px 4px;
+  --carddepth: 1px;
+}
+
+.kc-Dropdown--flatDepth {
+  border-radius: 1px 1px 1px 1px;
+  --carddepth: 0px;
+}
+
+.kc-Dropdown--rounded {
+  border-radius: 20px;
+}
+
+.kc-Dropdown--round {
+  border-radius: 150px;
+}

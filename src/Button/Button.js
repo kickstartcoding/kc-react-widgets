@@ -16,7 +16,7 @@ class Button extends Component {
   }
 
   _makeIcon(content, isSpan = false, isRight = false) {
-    const cls = 'Button-icon ' + (isRight ? 'Button-icon--right' : '');
+    const cls = 'kc-Button-icon ' + (isRight ? 'kc-Button-icon--right' : '');
     if (isSpan) {
       return (
         <span className={cls} role="img" aria-label="Icon">
@@ -34,7 +34,10 @@ class Button extends Component {
     let {iconEmoji} = this.props;
     const {value, icon, iconRight, iconEmojiRight} = this.props;
 
-    if (value === false || value === true && iconEmoji === undefined) {
+    if (
+        (value === false || value === true) &&
+        (iconEmoji === undefined && iconEmojiRight === undefined)
+      ) {
       iconEmoji = value ? '☑' : '☐';
     }
 
@@ -62,9 +65,9 @@ class Button extends Component {
     }
 
     return (
-      <div className="Button-contentsWrapper">
+      <div className="kc-Button-contentsWrapper">
         {imgLeft}
-        <div className="Button-childrenWrapper">
+        <div className="kc-Button-childrenWrapper">
           {this.props.children}
         </div>
         {imgRight}
@@ -75,15 +78,15 @@ class Button extends Component {
   render() {
     // Build button classes based on props
     const {style, type, shape, size, depth, value} = this.props;
-    let classNames = ['Button'];
+    let classNames = ['kc-Button'];
 
-    classNames.push(`Button--${type || 'default'}`);
-    classNames.push(`Button--${size || 'medium'}`);
-    classNames.push(`Button--${depth || 'medium'}Depth`);
-    classNames.push(`Button--${shape || 'square'}`);
+    classNames.push(`kc-Button--${type || 'default'}`);
+    classNames.push(`kc-Button--${size || 'medium'}`);
+    classNames.push(`kc-Button--${depth || 'medium'}Depth`);
+    classNames.push(`kc-Button--${shape || 'square'}`);
 
     if (value === true) {
-      classNames.push('Button--depressed');
+      classNames.push('kc-Button--depressed');
     }
 
     return (

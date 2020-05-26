@@ -7,7 +7,7 @@ body {
 .App {
     background: url('./congruent_pentagon/congruent_pentagon.png');
     display: grid;
-    grid-template-columns: 1fr 200px minmax(auto, 800px) 1fr;
+    grid-template-columns: 1fr 200px minmax(auto, 1200px) 1fr;
     grid-template-rows: 100px auto;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
@@ -17,37 +17,63 @@ body {
     box-sizing: border-box;
 }
 
+.App-title {
+  color: #333;
+}
+
 .App-navigation {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     padding: 10px;
 }
 
 .App-sidebar {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     display: relative;
     padding: 10px;
 }
 
 .App-mainContent {
     padding: 10px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .App-sidebar img {
     max-width: 100%;
 }
 
+.App-toc {
+  position: sticky;
+  display: block;
+  top: 20px;
+  left: 0;
+}
+
+.App-toc h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: palegoldenrod;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+.App-sidebar a::before {
+  content: '> ';
+}
 .App-sidebar a {
     display: block;
-    font-size: 24pt;
+    font-size: 17px;
     text-decoration: none;
-    color: olive;
-    font-weight: bold;
-    text-shadow: 0 0 3px olive;
+    font-weight: light;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .App-sidebar a:hover {
-    text-shadow: 0 0 10px olive;
+    text-decoration: underline;
 }
 
 .App-navigation h1 {
@@ -79,7 +105,7 @@ body {
 }
 
 .App-mainContent {
-    grid-column: 2 / span 2;
+    grid-column: 3;
 }
 
 .App-mainContent h1 {
@@ -107,9 +133,15 @@ body {
     align-items: start;
 }
 
+.App-library > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .Code {
     font-size: 14pt;
     background: white;
     padding: 20px;
     border-radius: 10px;
+    margin-top: 0;
 }
