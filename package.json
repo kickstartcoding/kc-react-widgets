@@ -1,6 +1,6 @@
 {
   "name": "kc-react-widgets",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Suite of pre-styled React components",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -11,7 +11,7 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component",
+    "build": "nwb build-react-component --copy-files",
     "clean": "nwb clean-module && nwb clean-demo",
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
@@ -30,10 +30,17 @@
   "author": "michaelb",
   "homepage": "./",
   "license": "MIT",
-  "repository": "http://github.com/kickstartcoding/kc-react-widgets/",
+  "repository": "https://github.com/kickstartcoding/kc-react-widgets/",
   "keywords": [
+    "react",
     "react-component",
+    "suite",
     "button",
+    "modal",
+    "dropdown",
+    "card",
+    "input",
+    "components",
     "widgets",
     "toggle"
   ]
